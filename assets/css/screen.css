@@ -1,5 +1,40 @@
 @import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
-@import "fonts.css";
+
+@import "@tryghost/shared-theme-assets/assets/css/v1/screen.css";
+
+
+
+@font-face {
+    font-family: FreightPro;
+    font-style: normal;
+    font-weight: 400;
+    src: local(""), url("../fonts/Freight-Big-Pro-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: FreightPro;
+    font-style: normal;
+    font-weight: 700;
+    src: local(""), url("../fonts/Freight-Big-Pro-Bold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Lora;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local(""), url("../fonts/lora-v25-latin-regular.woff2") format("woff2"),
+         url("../fonts/lora-v25-latin-regular.woff") format("woff");
+}
+
+
+
+h1,h2,h3,h4,h5,h6 { 
+    font-family: FreightPro; 
+    font-weight: bold;
+}
+body { font-family: Lora; }
+
 
 :root {
     --font-sans: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
