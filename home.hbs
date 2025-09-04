@@ -1,31 +1,32 @@
 {{!< default}}
 
 <main class="gh-main gh-outer">
+
+<div class="hero-images pb-10">
+    <img class="object-cover max-h-[500px] w-full" src="assets/images/hero-images.jpg" alt="hero-images">
+</div>
+
     <div class="gh-inner">
         <section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name !text-[43px] text-center">
-               
-                  LETTERS FROM THE THRESHOLD
-
+            <h2 class="gh-topic-name">
+                {{#match pagination.pages ">" 1}}
+                    <a href="{{@site.url}}/page/2">Latest</a>
+                {{else}}
+                    Latest
+                {{/match}}
             </h2>
 
-            <div class="gh-topic-content ">
-                {{#get "posts" filter="tag:library" limit="7"}}
-    {{#foreach posts}}
-        {{> "loop-grid"}}
-    {{/foreach}}
-{{/get}}
+            <div class="gh-topic-content">
+                {{#foreach posts limit="7"}}
+                    {{> "loop-grid"}}
+                {{/foreach}}
             </div>
 
-
-
-            <footer class="gh-topic-footer !text-center">
-    {{#match pagination.pages ">" 1}}
-        <a class="gh-topic-link" href="{{@site.url}}/tag/library">
-           ENTER LIBRARY {{> "icons/arrow"}}
-        </a>
-    {{/match}}
-</footer>
+            <footer class="gh-topic-footer">
+                {{#match pagination.pages ">" 1}}
+                    <a class="gh-topic-link" href="{{@site.url}}/page/2">Show more {{> "icons/arrow"}}</a>
+                {{/match}}
+            </footer>
         </section>
 
         {{#if @custom.enter_tag_slugs_for_primary_sections}}
@@ -44,173 +45,28 @@
             {{/match}}
         {{/if}}
 
-       
-
-
-
-<section class="gh-topic gh-topic-grid">
-            <h2 class="gh-topic-name !text-[43px] text-center">
-               
-                  LETTERS FROM THE THRESHOLD
-
-            </h2>
-
-            <div class="gh-topic-content ">
-                {{#get "posts" filter="tag:e" limit="7"}}
-    {{#foreach posts}}
-        {{> "loop-grid"}}
-    {{/foreach}}
-{{/get}}
-            </div>
-
-
-
-            <footer class="gh-topic-footer !text-center">
-    {{#match pagination.pages ">" 1}}
-        <a class="gh-topic-link" href="{{@site.url}}/tag/library">
-           ENTER LIBRARY {{> "icons/arrow"}}
-        </a>
-    {{/match}}
-</footer>
-        </section>
-
-
-
-
-
-
-
-<section class="benefactions-area gh-topic-footer">
-
-<h2 class="gh-topic-name lg:!text-[43px] !md:text-[36px] text-[32px] text-center  pb-20">
-             BENEFACTIONS
-
-
-
-
-
-            </h2>
- <div class="grid md:grid-cols-2 grid-cols-1 gap-8">
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">BREATH AS THRESHOLD</h3>
-    <p class="italic"> 
-        
-        Quantum infused , this is not surface breathing. This is breath as gateway—breath as remembrance. When held in safe, sacred space, conscious breathwork becomes a profound tool for releasing long-held trauma stored in the body. Beneath the layers of survival, grief, and protection, the breath knows the way home. It moves past the thinking mind, past the stories, and into the nervous system itself—unraveling frozen patterns, reawakening emotional flow, and restoring the body’s natural rhythm. This work is not about control, but surrender. It is not about fixing, but feeling—meeting what was once too overwhelming to process, and allowing it, at last, to move. Breath becomes the bridge between pain and peace, between the wound and the witness.
-        
-         </p>
-</div>
-
-</div>
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">HIMALAYAN KUNDALINI KRIYA YOGA</h3>
-    <p class="italic"> 
-        
-       Himalayan Kundalini Kriya Yoga is an ancient, sacred practice passed down through the Himalayan lineage—designed to awaken the dormant energies within the subtle body and return the practitioner to stillness, presence, and divine remembrance. Through precise breathwork (pranayama), rhythmic movement (kriya), and deep inner focus, this practice gently clears energetic blocks, stabilizes the nervous system, and opens the inner pathways for spiritual awakening. It is not forceful or performative, but deeply intuitive—rooted in the silence beyond form.
-        
-         </p>
-</div>
-
-</div>
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">
-MEDITATION
-    </h3>
-    <p class="italic"> 
-        
-Drawn from ancient traditions and refined through direct experience — Buddhist, Vedic, Himalayan, and mystic lineages. This path is not a compilation, but a reclamation — of meditation as a warrior’s discipline, where silence becomes sword, breath becomes shield, and the heart becomes the true battlefield of liberation. those called to deepen the journey, this section offers practices that arise from the stillness beyond form—where breath, presence, and consciousness become one. These teachings are not techniques in the ordinary sense, but doorways.         
-         </p>
-</div>
-
-</div>
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">
-CRITICAL STRESS REDUCTION
-
-    </h3>
-    <p class="italic"> 
-        
-Critical stress reduction is not about managing stress—it’s about honoring the body’s natural intelligence when it has been pushed beyond its capacity to cope. In moments of overwhelm, trauma, or long-term depletion, the nervous system becomes flooded, frozen, or hyper-reactive. Critical stress reduction offers a path back to balance through breath, grounded presence, gentle somatic awareness, and deep listening. It is a sacred pause that interrupts the cycle of survival, allowing the body, mind, and heart to begin remembering safety, stillness, and trust. True healing begins not when we push through, but when we allow ourselves to soften into what is—and meet it with compassion.         </p>
-</div>
-
-</div>
-
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">
-SACRED GEOMETRY
-
-
-    </h3>
-    <p class="italic"> 
-        
-Sacred geometry is the language of creation—the underlying pattern through which all life expresses itself. From the spiral of galaxies to the unfolding of a leaf, it reveals the divine intelligence woven into every form. These shapes and proportions are not merely symbols; they are living vibrations, ancient mirrors of the harmony that exists within us and all around us. To engage with sacred geometry is to remember the order beneath chaos, the stillness within movement, and the presence of love at the heart of all design
-
-</div>
-
-</div>
-
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">
-THE AYURVEDA OF RELATIONSHIP
-
-
-    </h3>
-    <p class="italic"> 
-        
-Rooted in classical Ayurveda and adapted through lived experience, spiritual inquiry, and direct transmission. Inspired by the doshic system (Vata, Pitta, Kapha) as a map not only of the body, but of the psyche, emotions, and relational dynamics. Infused with spiritual teachings on presence, love, and attunement.  An intuitive system of understanding how people’s elemental constitutions influence how they give and receive love, process conflict, hold space, and evolve in intimacy.
-</div>
-
-</div>
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">
-MASTER STORY TELLING
-
-
-    </h3>
-    <p class="italic"> 
-        
-Timeless. Older than scripture, as ancient as firelight. While traditions across the world have refined the art — from griots of West Africa to Sufi mystics, Navajo weavers of tale, and Zen poets — my storytelling arose from silence, suffering, and the need to survive the unspeakable. Over time, it became a sacrament: a way to restore what had been severed between body, soul, and memory.  Master Storytelling is the sacred art of speaking truth through symbol, metaphor, and presence — not to entertain, but to awaken. It is a technology of healing, remembrance, and transmission.
-
-    </p>
-</div>
-
-</div>
-
-
-<div class="item-box p-6 ">
-<div class="title-box text-left">
-    <h3 class="pb-4">
-COMPASSIONATE PARENTING
-
-
-
-    </h3>
-    <p class="italic"> 
-        
-Born not from books or formal teachings, but from the raw immediacy of life. While informed by deep streams — Buddhist compassion, attachment theory, trauma healing, and spiritual surrender — this path unfolded through the everyday sacrament of raising a child. In my case, it was the path of loving my daughter — of being her guardian, teacher, student, and mirror — that opened this doorway. Compassionate Parenting became not a role, but a transmission.  Compassionate Parenting is the practice of being a safe nervous system, a sacred witness, and an unwavering presence in the life of a child.
-    </p>
-</div>
-
-</div>
-
-
-
-
-</section>
-
-            
+        {{#if @custom.enter_tag_slugs_for_secondary_sections}}
+            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}}]"}}
+                {{#if tags}}
+                    <div class="gh-topic-list">
+                        {{#foreach tags}}
+                            {{> "topic-minimal"}}
+                        {{/foreach}}
+                    </div>
+                {{/if}}
+            {{/get}}
+        {{else}}
+            {{#match posts.length ">" 1}}
+                {{#get "tags" include="count.posts" order="count.posts desc"}}
+                    {{#if tags.[3]}}
+                        <div class="gh-topic-list">
+                            {{#foreach tags from="4" limit="3"}}
+                                {{> "topic-minimal"}}
+                            {{/foreach}}
+                        </div>
+                    {{/if}}
+                {{/get}}
+            {{/match}}
+        {{/if}}
     </div>
 </main>
