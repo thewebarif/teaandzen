@@ -30,15 +30,24 @@
 
 
 h1,h2,h3,h4,h5,h6 { 
-    font-family: FreightPro; 
+   
 
-    color: #000000;
+    color: #E3DAD2;
+
+     font-family: "Rufina", serif!important;
 }
 body {
      font-family: Lora;
      color: #292524;
 
 
+}
+
+.tag-item img {
+    height: 214px;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 20px;
 }
 
 .item-box {

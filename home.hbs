@@ -2,18 +2,12 @@
 
 <main class="gh-main gh-outer">
 
-<div class="hero-images pb-10">
-    <img class="object-cover max-h-[500px] w-full" src="assets/images/hero-images.jpg" alt="hero-images">
-</div>
+
 
     <div class="gh-inner">
         <section class="gh-topic gh-topic-grid">
             <h2 class="gh-topic-name">
-                {{#match pagination.pages ">" 1}}
-                    <a href="{{@site.url}}/page/2">Latest</a>
-                {{else}}
-                    Latest
-                {{/match}}
+                
             </h2>
 
             <div class="gh-topic-content">
@@ -24,7 +18,7 @@
 
             <footer class="gh-topic-footer">
                 {{#match pagination.pages ">" 1}}
-                    <a class="gh-topic-link" href="{{@site.url}}/page/2">Show more {{> "icons/arrow"}}</a>
+                    <a class="gh-topic-link gh-head-btn gh-btn gh-primary-btn gh-portal-close" href="/tag/library">ENTER LIBRARY</a>
                 {{/match}}
             </footer>
         </section>
@@ -45,28 +39,8 @@
             {{/match}}
         {{/if}}
 
-        {{#if @custom.enter_tag_slugs_for_secondary_sections}}
-            {{#get "tags" filter="slug:[{{@custom.enter_tag_slugs_for_secondary_sections}}]"}}
-                {{#if tags}}
-                    <div class="gh-topic-list">
-                        {{#foreach tags}}
-                            {{> "topic-minimal"}}
-                        {{/foreach}}
-                    </div>
-                {{/if}}
-            {{/get}}
-        {{else}}
-            {{#match posts.length ">" 1}}
-                {{#get "tags" include="count.posts" order="count.posts desc"}}
-                    {{#if tags.[3]}}
-                        <div class="gh-topic-list">
-                            {{#foreach tags from="4" limit="3"}}
-                                {{> "topic-minimal"}}
-                            {{/foreach}}
-                        </div>
-                    {{/if}}
-                {{/get}}
-            {{/match}}
-        {{/if}}
+        
+            
+       
     </div>
 </main>
